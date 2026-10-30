@@ -8,8 +8,8 @@ The agent receives CSV files and a question, explores the data, writes and runs 
 code in a sandbox, and submits an answer. Every answer is checked against ground truth
 computed by code, and every failure is classified with a failure taxonomy.
 
-> **Status:** v0.1. Infrastructure, 34 tasks and the evaluation harness are done.
-> Benchmark results will be published here once the first full run is complete.
+> **Status:** v0.1. Infrastructure, 35 tasks and the evaluation harness are done.
+> First full run published below (one model); more models are on the roadmap.
 
 ## Why
 
@@ -76,6 +76,54 @@ Each episode gets exactly one **outcome**:
 Plus multi-label **behaviour flags**, recorded even on successes: `tool_hallucination`
 (called a non-existent tool or sent invalid arguments), `code_error`, `repeated_call`,
 `no_evidence`, `text_only_turn`.
+
+## Results
+
+First full run (`--run-id main`, October 2026), one repeat per task, temperature 0.
+Raw data, including every trajectory, is in [`results/main/`](results/main/).
+
+| Model | Tasks | Success | 95% CI | Mean steps | Mean latency | Tokens in / out |
+|---|---|---|---|---|---|---|
+| `gemini-flash-lite` (`gemini-3.5-flash-lite`) | 35 | **94.3%** (33/35) | 81.4% - 98.4% | 5.1 | 5.9 s | 199,208 / 8,131 |
+
+By category:
+
+| Category | Tasks | Correct |
+|---|---|---|
+| aggregation | 4 | 4 |
+| groupby | 4 | 4 |
+| filtering | 3 | 3 |
+| time_series | 4 | 4 |
+| join | 4 | 4 |
+| cleaning | 5 | 5 |
+| statistics | 4 | 4 |
+| multi_step | 4 | 4 |
+| unanswerable | 3 | **1** |
+
+What the run shows:
+
+- **Every answerable task was solved (32/32)**, including all the data-quality traps:
+  duplicate rows, missing discounts, the `-999` sensor code and the gaps in the sensor
+  time series. On synthetic data of this size, a small current model is already good at
+  pandas.
+- **The weak spot is knowing when to stop.** Both failures are unanswerable questions
+  (`un_002`: "which sales representative closed the most orders?", `un_003`: "what is the
+  profit margin on Laptop sales?"). The model never invented an answer
+  (`hallucinated_answer` = 0); instead it kept re-reading the CSV columns looking for a
+  field that does not exist until it hit the 12-step limit (`max_steps`). It recognised
+  the missing data in only 1 of 3 cases.
+- **Code errors are frequent but recoverable.** 7 of 35 episodes (20%) had at least one
+  failing `run_python` call (e.g. a missing `import glob`). The model read the traceback
+  and fixed the code each time; 5 of those 7 ended correct, and the other 2 are the
+  unanswerable failures above, which failed for a different reason.
+- **No tool hallucination**: no calls to non-existent tools or with invalid arguments.
+
+Caveat: with 35 tasks the confidence interval is wide (81-98%). The answerable tasks are
+close to saturated for this model, so telling models apart will need the harder,
+hand-written tasks on the roadmap.
+
+`gemini-flash` (`gemini-3.5-flash`) could not be run: its free tier allows 20 requests
+per day, about 4 tasks (see [Free model providers](#free-model-providers)).
 
 ## Quickstart
 
@@ -150,7 +198,9 @@ uv run ruff check .
 
 ## Roadmap
 
-- [ ] First full benchmark run across 4-6 free models
+- [x] First full benchmark run (`gemini-flash-lite`)
+- [ ] Same run across 4-6 free models (Groq, OpenRouter, Cerebras)
+- [ ] Make the step limit and stopping behaviour on unanswerable questions a reported metric
 - [ ] Grow to 60-100 tasks, including hand-written hard cases
 - [ ] Qualitative error analysis of `wrong_answer` trajectories
 - [ ] Ablations: persistent kernel vs stateless, with vs without data dictionary hint

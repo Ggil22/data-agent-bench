@@ -1,0 +1,2 @@
+model,episodes,success_rate,ci_low,ci_high,mean_steps,mean_latency_s,prompt_tokens,completion_tokens
+gemini-flash-lite,35,0.9428571428571428,0.8139261926062996,0.984187170385956,5.142857142857143,5.904285714285715,199208,8131
