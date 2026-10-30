@@ -1,0 +1,611 @@
+order_ref,order_date,customer_email,amount,currency,status
+W00001,2024-09-07,USER111@GMAIL.COM,39.84,EUR,completed
+W00002,11/11/2024,user033@gmail.com,70.63,EUR,completed
+W00003,2024-09-04,user143@yahoo.es,162.1,EUR,refunded
+W00004,2024-01-12,user002@yahoo.es,21.14,EUR,cancelled
+W00005,31/03/2024,USER010@OUTLOOK.COM,124.36,EUR,completed
+W00006,2024-10-11,user001@outlook.com,77.98,USD,completed
+W00007,2024-12-09,User000@gmail.com,134.88,EUR,completed
+W00008,05/08/2024,user000@gmail.com,67.38,EUR,completed
+W00009,2024-10-18,user041@yahoo.es,96.76,EUR,completed
+W00010,2024-01-14,user145@outlook.com,81.05,EUR,completed
+W00011,2024-04-28,user001@outlook.com,83.3,EUR,completed
+W00012,26/04/2024,USER019@OUTLOOK.COM,352.26,USD,completed
+W00013,15/08/2024,user002@yahoo.es,146.09,USD,completed
+W00014,2024-11-23,qa2@example.com,7328.81,EUR,completed
+W00015,"Jul 27, 2024",user001@outlook.com,136.13,EUR,completed
+W00016,2024-04-27,user007@outlook.com,114.16,USD,refunded
+W00017,08/06/2024,user059@yahoo.es,104.81,EUR,completed
+W00018,2024-11-02,user018@gmail.com,40.26,EUR,completed
+W00019,2024-06-23,user046@outlook.com,20.76,USD,completed
+W00020,2024-08-25,user001@outlook.com,177.39,EUR,completed
+W00021,25/06/2024,user003@gmail.com,83.96,EUR,refunded
+W00022,06/07/2024,user030@gmail.com,75.06,EUR,completed
+W00023,14/03/2024,user000@gmail.com,45.21,USD,completed
+W00024,29/12/2024,User078@gmail.com,134.81,EUR,completed
+W00025,26/01/2024,user024@gmail.com,74.73,USD,completed
+W00026,"Jul 19, 2024",user009@gmail.com,47.8,EUR,cancelled
+W00027,2024-11-05,user024@gmail.com,53.97,EUR,completed
+W00028,2024-02-25,user109@outlook.com,36.75,EUR,completed
+W00029,2024-06-29,USER040@OUTLOOK.COM,140.23,EUR,completed
+W00030,29/03/2024,user006@gmail.com,37.16,EUR,completed
+W00031,2024-03-19,user004@outlook.com,80.68,EUR,completed
+W00032,2024-12-17,user000@gmail.com,110.26,EUR,completed
+W00033,2024-11-07,qa1@example.com,2007.4,EUR,completed
+W00034,2024-12-29,user000@gmail.com,140.98,EUR,completed
+W00035,24/12/2024,user016@outlook.com,58.6,EUR,refunded
+W00036,2024-03-24, user021@gmail.com ,152.28,EUR,completed
+W00037,2024-03-24,user000@gmail.com,74.0,USD,completed
+W00038,2024-11-05,User001@outlook.com,51.93,EUR,completed
+W00039,20/11/2024,user000@gmail.com,56.91,EUR,completed
+W00040,23/07/2024,user000@gmail.com,32.86,EUR,completed
+W00041,30/11/2024,user001@outlook.com,49.43,USD,refunded
+W00042,2024-10-27,user000@gmail.com,38.76,EUR,refunded
+W00043,17/11/2024,user004@outlook.com,111.29,USD,refunded
+W00044,2024-06-15, user001@outlook.com ,66.16,EUR,completed
+W00045,2024-12-10,user000@gmail.com,108.27,EUR,completed
+W00046,2024-08-23,user034@outlook.com,63.83,EUR,completed
+W00047,2024-11-15,USER000@GMAIL.COM,47.49,EUR,completed
+W00048,2024-07-29,user004@outlook.com,33.29,EUR,completed
+W00049,2024-12-28,user058@outlook.com,32.28,EUR,completed
+W00050,2024-04-22,user091@outlook.com,74.66,EUR,completed
+W00051,2024-05-05,user009@gmail.com,41.16,USD,completed
+W00052,15/06/2024,user010@outlook.com,53.17,USD,completed
+W00053,2024-02-20,user000@gmail.com,29.23,EUR,completed
+W00054,2024-12-05,USER000@GMAIL.COM,84.81,USD,completed
+W00055,2024-11-24,user071@yahoo.es,59.0,EUR,completed
+W00056,"Dec 01, 2024",user001@outlook.com,146.34,EUR,cancelled
+W00057,2024-08-13,user001@outlook.com,64.54,USD,completed
+W00058,04/02/2024,user117@gmail.com,57.13,EUR,completed
+W00059,"Oct 31, 2024",user023@yahoo.es,31.82,EUR,completed
+W00060,2024-05-25,User001@outlook.com,54.29,USD,completed
+W00061,"Aug 27, 2024",USER009@GMAIL.COM,65.96,EUR,completed
+W00062,25/11/2024, user000@gmail.com ,129.06,EUR,completed
+W00063,2024-12-07,user000@gmail.com,35.8,USD,completed
+W00064,2024-03-06,user037@outlook.com,118.73,EUR,completed
+W00065,2024-02-29,user002@yahoo.es,400.99,USD,completed
+W00066,09/05/2024,user001@outlook.com,10.65,EUR,completed
+W00067,2024-07-11,user000@gmail.com,58.23,EUR,completed
+W00068,"Jun 14, 2024",user000@gmail.com,173.68,USD,completed
+W00069,2024-11-01,user001@outlook.com,123.01,EUR,completed
+W00070,2024-09-30,user009@gmail.com,184.68,EUR,completed
+W00071,"Apr 17, 2024",user012@gmail.com,47.76,EUR,completed
+W00072,16/08/2024,user003@gmail.com,153.75,EUR,completed
+W00073,07/07/2024,user036@gmail.com,39.63,EUR,completed
+W00074,2024-04-09,user010@outlook.com,26.7,EUR,completed
+W00075,2024-01-23,User004@outlook.com,81.55,EUR,completed
+W00076,29/01/2024,User044@yahoo.es,39.31,EUR,completed
+W00077,2024-10-14,user105@gmail.com,85.98,EUR,completed
+W00078,2024-02-21,user097@outlook.com,73.54,USD,refunded
+W00079,"Jan 03, 2024",user000@gmail.com,67.09,EUR,refunded
+W00080,2024-03-07,user002@yahoo.es,87.04,USD,completed
+W00081,2024-12-03,user017@yahoo.es,136.35,EUR,completed
+W00082,2024-12-07,User000@gmail.com,139.06,EUR,completed
+W00083,2024-08-09,user067@outlook.com,162.83,EUR,completed
+W00084,2024-08-14,User003@gmail.com,63.18,EUR,completed
+W00085,2024-10-25,user012@gmail.com,49.44,EUR,completed
+W00086,2024-04-04,USER005@YAHOO.ES,25.45,EUR,completed
+W00087,2024-12-10,user041@yahoo.es,28.14,EUR,completed
+W00088,"Aug 30, 2024",User061@outlook.com,69.75,USD,completed
+W00089,15/03/2024,User000@gmail.com,37.9,EUR,completed
+W00090,2024-11-09,user125@yahoo.es,82.62,EUR,completed
+W00091,"Mar 21, 2024",user004@outlook.com,24.07,EUR,completed
+W00092,03/05/2024, user018@gmail.com ,37.75,EUR,completed
+W00093,2024-11-19,user065@yahoo.es,114.55,EUR,completed
+W00094,01/02/2024,user000@gmail.com,92.94,EUR,completed
+W00095,2024-05-14,user090@gmail.com,174.45,EUR,completed
+W00096,2024-12-31,user008@yahoo.es,68.42,EUR,completed
+W00097,2024-11-09,qa3@example.com,6245.56,EUR,completed
+W00098,"Mar 14, 2024",user095@yahoo.es,33.63,EUR,completed
+W00099,21/11/2024,user075@gmail.com,78.33,EUR,completed
+W00100,2024-05-07, user016@outlook.com ,80.4,USD,refunded
+W00101,"May 28, 2024",user014@yahoo.es,75.58,EUR,completed
+W00102,2024-08-01,user003@gmail.com,42.82,EUR,refunded
+W00103,2024-08-09,user006@gmail.com,121.31,EUR,completed
+W00104,13/07/2024,user003@gmail.com,97.62,EUR,completed
+W00105,"Aug 18, 2024",User012@gmail.com,78.23,USD,completed
+W00106,01/03/2024,user004@outlook.com,99.36,EUR,completed
+W00107,2024-07-01,user006@gmail.com,73.16,USD,completed
+W00108,2024-03-02,user041@yahoo.es,56.22,EUR,completed
+W00109,25/04/2024,user000@gmail.com,64.0,EUR,completed
+W00110,05/02/2024,USER001@OUTLOOK.COM,83.46,USD,completed
+W00111,2024-11-01,user007@outlook.com,376.76,EUR,completed
+W00112,2024-12-09,user000@gmail.com,211.82,EUR,completed
+W00113,2024-05-17,user023@yahoo.es,155.58,EUR,completed
+W00114,2024-12-29,User000@gmail.com,53.81,EUR,completed
+W00115,2024-04-12,USER001@OUTLOOK.COM,115.98,EUR,cancelled
+W00116,2024-07-10,USER019@OUTLOOK.COM,139.74,EUR,completed
+W00117,18/06/2024,user001@outlook.com,26.67,EUR,completed
+W00118,04/01/2024,User001@outlook.com,47.9,EUR,completed
+W00119,2024-05-13,USER000@GMAIL.COM,53.85,EUR,completed
+W00120,25/03/2024,user007@outlook.com,204.43,EUR,completed
+W00121,30/04/2024,user006@gmail.com,49.65,USD,cancelled
+W00122,2024-08-20,user015@gmail.com,121.87,EUR,completed
+W00123,2024-04-21,user009@gmail.com,45.27,EUR,refunded
+W00124,2024-11-16,user004@outlook.com,124.71,EUR,completed
+W00125,2024-07-06,user015@gmail.com,52.73,EUR,completed
+W00126,2024-06-30,user099@gmail.com,104.8,EUR,completed
+W00127,2024-03-22, user040@outlook.com ,105.66,EUR,completed
+W00128,"Apr 20, 2024",user001@outlook.com,96.98,EUR,completed
+W00129,19/10/2024,user119@yahoo.es,106.58,EUR,completed
+W00130,10/02/2024,user022@outlook.com,35.46,USD,completed
+W00131,2024-10-07,user001@outlook.com,80.04,EUR,cancelled
+W00132,2024-12-27, user062@yahoo.es ,46.74,USD,completed
+W00133,2024-06-06,user055@outlook.com,43.0,EUR,completed
+W00134,"Dec 27, 2024",USER010@OUTLOOK.COM,191.71,USD,cancelled
+W00135,03/06/2024,USER000@GMAIL.COM,138.61,EUR,completed
+W00136,20/12/2024, user017@yahoo.es ,34.54,USD,completed
+W00137,"Jul 03, 2024", user037@outlook.com ,145.54,EUR,completed
+W00138,2024-08-27,user146@yahoo.es,46.79,EUR,completed
+W00139,26/06/2024,user042@gmail.com,56.91,EUR,completed
+W00140,2024-04-02,user012@gmail.com,212.13,USD,completed
+W00141,"Jan 17, 2024",user009@gmail.com,24.77,EUR,completed
+W00142,07/07/2024,USER047@YAHOO.ES,31.78,EUR,completed
+W00143,2024-08-28,User048@gmail.com,67.85,EUR,completed
+W00144,"Aug 23, 2024",user021@gmail.com,114.73,USD,completed
+W00145,2024-09-14,user017@yahoo.es,43.92,USD,completed
+W00146,16/01/2024,user035@yahoo.es,55.02,EUR,completed
+W00147,2024-11-17,USER046@OUTLOOK.COM,55.0,EUR,completed
+W00148,2024-10-26,user055@outlook.com,119.0,EUR,refunded
+W00149,2024-08-20,user004@outlook.com,130.94,USD,completed
+W00150,"May 10, 2024",user023@yahoo.es,181.68,EUR,completed
+W00151,2024-04-14,User022@outlook.com,63.36,EUR,cancelled
+W00152,"May 08, 2024",user017@yahoo.es,70.11,EUR,completed
+W00153,09/11/2024,user015@gmail.com,31.63,EUR,completed
+W00154,"Sep 02, 2024",user015@gmail.com,38.2,EUR,refunded
+W00155,2024-01-10,USER000@GMAIL.COM,37.83,USD,refunded
+W00156,"Apr 11, 2024",user014@yahoo.es,33.9,USD,completed
+W00157,2024-02-24,user066@gmail.com,82.14,EUR,completed
+W00158,2024-05-02,user002@yahoo.es,79.66,EUR,completed
+W00159,12/10/2024,user064@outlook.com,53.25,EUR,completed
+W00160,27/07/2024,user016@outlook.com,123.53,EUR,completed
+W00161,2024-02-10,user133@outlook.com,43.33,EUR,completed
+W00162,2024-03-01,user019@outlook.com,34.03,USD,refunded
+W00163,"Sep 18, 2024", user046@outlook.com ,64.34,EUR,completed
+W00164,2024-04-18,USER072@GMAIL.COM,18.34,EUR,completed
+W00165,26/06/2024,User002@yahoo.es,80.06,EUR,completed
+W00166,"Jun 26, 2024",user094@outlook.com,98.9,USD,completed
+W00167,2024-11-15,user000@gmail.com,124.66,EUR,completed
+W00168,28/10/2024,USER033@GMAIL.COM,131.32,EUR,completed
+W00169,2024-01-20,user136@outlook.com,133.92,EUR,completed
+W00170,"Dec 04, 2024",user000@gmail.com,39.5,EUR,completed
+W00171,12/07/2024,user029@yahoo.es,40.49,EUR,completed
+W00172,22/05/2024,user034@outlook.com,61.78,EUR,completed
+W00173,17/12/2024,user000@gmail.com,40.48,EUR,completed
+W00174,2024-06-17,USER014@YAHOO.ES,61.55,EUR,completed
+W00175,2024-12-18,User018@gmail.com,71.42,EUR,refunded
+W00176,2024-10-01,user141@gmail.com,52.95,EUR,completed
+W00177,2024-12-23,user010@outlook.com,37.41,EUR,completed
+W00178,2024-01-16,user001@outlook.com,148.97,EUR,refunded
+W00179,13/05/2024,USER032@YAHOO.ES,54.77,EUR,completed
+W00180,2024-06-14,USER073@OUTLOOK.COM,49.56,EUR,completed
+W00181,"Nov 27, 2024",user001@outlook.com,50.92,EUR,completed
+W00182,13/03/2024,user002@yahoo.es,100.52,EUR,completed
+W00183,22/11/2024,USER095@YAHOO.ES,39.24,USD,completed
+W00184,2024-11-18,qa3@example.com,8052.49,EUR,completed
+W00185,"Jun 04, 2024",User004@outlook.com,53.64,USD,completed
+W00186,2024-09-08,user127@outlook.com,45.18,EUR,completed
+W00187,2024-11-28,user000@gmail.com,103.53,EUR,completed
+W00188,24/01/2024,user000@gmail.com,70.92,EUR,completed
+W00189,2024-12-18,user000@gmail.com,47.0,EUR,completed
+W00190,2024-09-16,user000@gmail.com,86.73,EUR,completed
+W00191,19/11/2024,user023@yahoo.es,111.86,EUR,completed
+W00192,28/10/2024,User061@outlook.com,60.42,EUR,completed
+W00193,"Nov 05, 2024",user060@gmail.com,100.17,EUR,completed
+W00194,"May 25, 2024",User004@outlook.com,100.6,EUR,completed
+W00195,2024-08-11,user000@gmail.com,97.53,EUR,completed
+W00196,22/12/2024,User022@outlook.com,30.33,EUR,refunded
+W00197,13/12/2024,user058@outlook.com,119.41,EUR,completed
+W00198,01/11/2024,user001@outlook.com,64.15,USD,cancelled
+W00199,10/09/2024,user004@outlook.com,108.33,EUR,completed
+W00200,2024-06-04,user000@gmail.com,102.54,USD,completed
+W00201,2024-08-16,user000@gmail.com,63.65,USD,completed
+W00202,"Apr 03, 2024",user003@gmail.com,44.51,EUR,completed
+W00203,2024-09-12,user147@gmail.com,294.56,EUR,completed
+W00204,2024-01-22,user001@outlook.com,94.54,USD,completed
+W00205,17/12/2024,user001@outlook.com,83.82,EUR,completed
+W00206,2024-11-23,qa3@example.com,3559.11,EUR,completed
+W00207,2024-08-30, user014@yahoo.es ,78.35,USD,cancelled
+W00208,2024-12-08,user016@outlook.com,62.21,USD,completed
+W00209,03/07/2024,user000@gmail.com,101.01,EUR,refunded
+W00210,2024-02-02,user028@outlook.com,99.21,USD,completed
+W00211,2024-04-12,user000@gmail.com,50.84,USD,completed
+W00212,02/09/2024,user075@gmail.com,69.07,EUR,completed
+W00213,2024-11-13,user002@yahoo.es,84.38,USD,completed
+W00214,2024-08-05,User029@yahoo.es,99.08,EUR,completed
+W00215,2024-06-21,user024@gmail.com,79.08,EUR,completed
+W00216,05/05/2024,user000@gmail.com,76.69,EUR,completed
+W00217,"Jan 17, 2024",user000@gmail.com,51.49,EUR,refunded
+W00218,2024-11-03,USER001@OUTLOOK.COM,102.76,EUR,completed
+W00219,2024-02-21,user001@outlook.com,74.22,USD,completed
+W00220,2024-12-06, user002@yahoo.es ,128.4,EUR,completed
+W00221,2024-01-01,user001@outlook.com,29.21,EUR,completed
+W00222,2024-05-08,user022@outlook.com,181.0,EUR,completed
+W00223,15/11/2024, user012@gmail.com ,50.53,USD,completed
+W00224,2024-06-09,User002@yahoo.es,78.14,USD,completed
+W00225,2024-06-13,user029@yahoo.es,166.44,EUR,completed
+W00226,21/08/2024,USER000@GMAIL.COM,55.71,EUR,completed
+W00227,2024-11-09,qa1@example.com,5571.52,EUR,completed
+W00228,"Jun 23, 2024",user001@outlook.com,61.68,EUR,completed
+W00229,2024-12-22, user010@outlook.com ,84.12,EUR,completed
+W00230,2024-06-19,USER030@GMAIL.COM,83.45,USD,completed
+W00231,2024-04-20,user073@outlook.com,65.24,USD,completed
+W00232,"Sep 18, 2024",USER023@YAHOO.ES,55.9,EUR,completed
+W00233,2024-01-11,USER012@GMAIL.COM,84.37,USD,completed
+W00234,2024-04-14,user018@gmail.com,101.74,USD,completed
+W00235,01/05/2024,user002@yahoo.es,46.97,EUR,completed
+W00236,20/11/2024,user002@yahoo.es,34.13,EUR,completed
+W00237,2024-10-22,user047@yahoo.es,112.88,EUR,completed
+W00238,2024-12-19,User000@gmail.com,73.3,USD,completed
+W00239,"Jul 09, 2024",user045@gmail.com,28.96,USD,completed
+W00240,"Jul 19, 2024",user000@gmail.com,68.83,EUR,refunded
+W00241,2024-12-29,user002@yahoo.es,269.61,USD,completed
+W00242,2024-05-19,user121@outlook.com,69.55,USD,completed
+W00243,2024-11-23,user009@gmail.com,101.56,EUR,completed
+W00244,2024-08-13,USER008@YAHOO.ES,88.4,EUR,completed
+W00245,16/12/2024, user000@gmail.com ,39.66,EUR,completed
+W00246,10/05/2024,user016@outlook.com,53.89,EUR,completed
+W00247,2024-10-18,user001@outlook.com,24.21,EUR,completed
+W00248,2024-12-27,user004@outlook.com,38.2,EUR,completed
+W00249,2024-04-06,user003@gmail.com,86.85,EUR,completed
+W00250,2024-12-09,USER013@OUTLOOK.COM,186.32,EUR,completed
+W00251,2024-01-12,user052@outlook.com,188.54,EUR,completed
+W00252,2024-10-15,user013@outlook.com,48.94,EUR,refunded
+W00253,2024-01-10,User056@yahoo.es,99.97,USD,refunded
+W00254,2024-11-08,User001@outlook.com,111.15,EUR,completed
+W00255,10/03/2024,User004@outlook.com,42.07,EUR,completed
+W00256,2024-09-14,user013@outlook.com,126.12,EUR,completed
+W00257,2024-12-30,user000@gmail.com,70.02,USD,completed
+W00258,2024-02-21,User059@yahoo.es,338.23,USD,completed
+W00259,2024-10-10,user002@yahoo.es,64.1,EUR,completed
+W00260,2024-12-23,user002@yahoo.es,26.39,EUR,completed
+W00261,2024-11-09, user000@gmail.com ,40.24,EUR,completed
+W00262,2024-09-21,user026@yahoo.es,199.68,EUR,completed
+W00263,"May 09, 2024",user006@gmail.com,50.1,EUR,completed
+W00264,19/01/2024,user001@outlook.com,49.09,EUR,completed
+W00265,"Dec 10, 2024",user020@yahoo.es,44.57,USD,completed
+W00266,20/01/2024,user001@outlook.com,133.83,EUR,completed
+W00267,"May 25, 2024",user099@gmail.com,29.62,EUR,completed
+W00268,2024-08-24,user006@gmail.com,153.38,EUR,completed
+W00269,"May 15, 2024", user002@yahoo.es ,27.17,EUR,completed
+W00270,16/12/2024,user000@gmail.com,39.15,EUR,completed
+W00271,2024-08-29,User020@yahoo.es,59.97,EUR,completed
+W00272,"Dec 07, 2024", user005@yahoo.es ,60.78,USD,completed
+W00273,2024-05-01,user011@yahoo.es,57.86,EUR,completed
+W00274,2024-06-10,user021@gmail.com,55.5,EUR,completed
+W00275,2024-04-19,USER001@OUTLOOK.COM,41.38,USD,completed
+W00276,2024-12-23,user019@outlook.com,125.71,EUR,completed
+W00277,01/09/2024, user002@yahoo.es ,31.67,USD,completed
+W00278,"Nov 04, 2024",user042@gmail.com,229.48,EUR,completed
+W00279,"Sep 23, 2024",user022@outlook.com,69.08,EUR,completed
+W00280,30/09/2024,user003@gmail.com,155.85,EUR,completed
+W00281,2024-03-06, user011@yahoo.es ,35.48,EUR,refunded
+W00282,2024-10-08,user011@yahoo.es,119.61,USD,completed
+W00283,16/12/2024,user036@gmail.com,124.13,EUR,completed
+W00284,2024-10-28,User000@gmail.com,137.02,USD,completed
+W00285,21/01/2024,user033@gmail.com,38.91,EUR,cancelled
+W00286,"Aug 03, 2024",user131@yahoo.es,66.67,USD,completed
+W00287,2024-03-04,user003@gmail.com,21.04,EUR,completed
+W00288,2024-11-09,User006@gmail.com,33.42,USD,completed
+W00289,"Dec 17, 2024",user108@gmail.com,69.8,EUR,completed
+W00290,2024-12-19,user000@gmail.com,90.64,EUR,completed
+W00291,2024-09-04,user020@yahoo.es,45.78,EUR,completed
+W00292,2024-09-04,user000@gmail.com,93.37,EUR,completed
+W00293,2024-08-07,user000@gmail.com,85.3,EUR,completed
+W00294,"Oct 06, 2024",user004@outlook.com,40.25,USD,completed
+W00295,2024-03-01, user056@yahoo.es ,57.21,EUR,completed
+W00296,2024-01-08,USER001@OUTLOOK.COM,76.06,EUR,completed
+W00297,2024-06-07,user066@gmail.com,57.33,EUR,completed
+W00298,2024-12-28,user001@outlook.com,60.91,EUR,completed
+W00299,2024-09-28,User003@gmail.com,75.56,EUR,completed
+W00300,13/10/2024,user011@yahoo.es,37.09,EUR,completed
+W00301,2024-04-20,USER016@OUTLOOK.COM,149.25,EUR,completed
+W00302,"Nov 04, 2024",user004@outlook.com,125.27,EUR,completed
+W00303,25/03/2024,user007@outlook.com,82.64,EUR,completed
+W00304,2024-05-30,user000@gmail.com,13.61,EUR,completed
+W00305,2024-06-06,User001@outlook.com,102.85,USD,completed
+W00306,2024-09-06,USER007@OUTLOOK.COM,27.25,EUR,completed
+W00307,2024-05-22,user022@outlook.com,179.54,USD,refunded
+W00308,2024-06-11,user057@gmail.com,102.18,EUR,completed
+W00309,2024-05-11, user040@outlook.com ,36.52,EUR,completed
+W00310,15/05/2024,user010@outlook.com,191.61,EUR,completed
+W00311,2024-11-02,USER001@OUTLOOK.COM,18.47,EUR,completed
+W00312,2024-07-01,user007@outlook.com,48.11,EUR,completed
+W00313,23/04/2024,user000@gmail.com,98.85,USD,completed
+W00314,2024-06-18,user002@yahoo.es,60.79,EUR,completed
+W00315,2024-01-30,user000@gmail.com,36.5,EUR,completed
+W00316,2024-10-19, user010@outlook.com ,113.45,USD,refunded
+W00317,2024-11-16,user000@gmail.com,105.39,USD,completed
+W00318,24/07/2024,user059@yahoo.es,31.93,EUR,completed
+W00319,2024-02-10,USER004@OUTLOOK.COM,65.63,EUR,completed
+W00320,2024-07-20,user032@yahoo.es,41.58,EUR,completed
+W00321,2024-09-11,user001@outlook.com,78.4,USD,completed
+W00322,2024-01-11,user018@gmail.com,35.19,EUR,completed
+W00323,2024-09-26,user013@outlook.com,189.53,EUR,completed
+W00324,25/11/2024,user098@yahoo.es,54.72,EUR,cancelled
+W00325,15/12/2024,USER042@GMAIL.COM,41.68,EUR,completed
+W00326,2024-02-21, user001@outlook.com ,77.39,USD,completed
+W00327,04/08/2024,user004@outlook.com,153.13,EUR,completed
+W00328,"Jun 09, 2024",user067@outlook.com,65.81,EUR,completed
+W00329,"May 04, 2024", user058@outlook.com ,61.76,EUR,completed
+W00330,01/04/2024,User001@outlook.com,38.93,EUR,completed
+W00331,2024-12-26,user011@yahoo.es,112.92,EUR,completed
+W00332,2024-07-02,User000@gmail.com,24.61,EUR,completed
+W00333,2024-12-01,user006@gmail.com,146.96,EUR,refunded
+W00334,2024-11-25,user028@outlook.com,29.49,EUR,completed
+W00335,22/11/2024,user003@gmail.com,103.38,EUR,completed
+W00336,2024-05-06,user004@outlook.com,139.89,USD,completed
+W00337,2024-06-03,User006@gmail.com,105.6,EUR,completed
+W00338,2024-03-20,User001@outlook.com,110.94,EUR,completed
+W00339,2024-03-20,User000@gmail.com,62.34,EUR,completed
+W00340,09/09/2024,User111@gmail.com,224.89,EUR,completed
+W00341,28/04/2024,user095@yahoo.es,136.67,EUR,completed
+W00342,2024-01-18,User000@gmail.com,123.58,EUR,completed
+W00343,"Dec 13, 2024",user000@gmail.com,34.24,EUR,completed
+W00344,2024-08-29,user001@outlook.com,30.25,EUR,completed
+W00345,28/06/2024,USER059@YAHOO.ES,114.03,USD,completed
+W00346,2024-06-07,user006@gmail.com,68.35,EUR,completed
+W00347,2024-10-14,user090@gmail.com,45.29,USD,completed
+W00348,2024-01-21,user001@outlook.com,58.68,EUR,completed
+W00349,2024-02-01,user000@gmail.com,27.35,EUR,completed
+W00350,07/03/2024,user001@outlook.com,42.78,USD,refunded
+W00351,2024-01-22,user003@gmail.com,50.32,USD,refunded
+W00352,2024-01-05,user008@yahoo.es,115.38,USD,completed
+W00353,31/07/2024,user001@outlook.com,53.02,EUR,completed
+W00354,2024-02-06,user008@yahoo.es,46.29,EUR,completed
+W00355,"Jul 20, 2024",user094@outlook.com,198.41,EUR,completed
+W00356,10/10/2024,user043@outlook.com,61.16,USD,completed
+W00357,"Jan 16, 2024",user002@yahoo.es,80.61,EUR,completed
+W00358,2024-03-08,user003@gmail.com,117.2,USD,completed
+W00359,"Jan 23, 2024",user139@outlook.com,51.86,USD,refunded
+W00360,2024-05-21,user042@gmail.com,24.12,USD,completed
+W00361,2024-12-30,User017@yahoo.es,57.0,USD,completed
+W00362,2024-11-05,User006@gmail.com,46.48,EUR,completed
+W00363,31/07/2024,User006@gmail.com,122.31,EUR,completed
+W00364,2024-09-06,user001@outlook.com,65.9,EUR,completed
+W00365,2024-10-25,user013@outlook.com,24.7,EUR,refunded
+W00366,"Jan 30, 2024",user072@gmail.com,163.83,EUR,completed
+W00367,16/08/2024,user001@outlook.com,124.49,EUR,completed
+W00368,08/07/2024,user000@gmail.com,116.96,EUR,completed
+W00369,2024-12-27,user000@gmail.com,73.84,EUR,completed
+W00370,15/09/2024,User001@outlook.com,48.41,EUR,completed
+W00371,2024-05-28,USER001@OUTLOOK.COM,28.36,EUR,completed
+W00372,2024-10-28,user016@outlook.com,72.64,EUR,completed
+W00373,2024-06-27,USER035@YAHOO.ES,27.49,EUR,completed
+W00374,2024-09-19,User000@gmail.com,50.37,EUR,completed
+W00375,29/10/2024,user085@outlook.com,160.75,USD,refunded
+W00376,2024-05-11,USER020@YAHOO.ES,43.18,EUR,completed
+W00377,"May 10, 2024",user001@outlook.com,64.5,EUR,completed
+W00378,2024-05-08,user003@gmail.com,50.76,USD,refunded
+W00379,2024-09-18,user010@outlook.com,107.59,EUR,refunded
+W00380,2024-02-27, user000@gmail.com ,92.65,USD,completed
+W00381,"Apr 09, 2024",user010@outlook.com,70.26,EUR,cancelled
+W00382,"Jun 17, 2024",user001@outlook.com,80.34,USD,refunded
+W00383,11/01/2024,user000@gmail.com,99.55,USD,completed
+W00384,"Dec 20, 2024",user119@yahoo.es,191.45,USD,completed
+W00385,"Jan 31, 2024",user132@gmail.com,40.44,EUR,completed
+W00386,06/04/2024,user015@gmail.com,27.8,EUR,completed
+W00387,01/03/2024,User000@gmail.com,27.85,EUR,completed
+W00388,31/07/2024,user001@outlook.com,46.1,USD,completed
+W00389,27/11/2024,user010@outlook.com,57.8,USD,completed
+W00390,2024-01-14,USER013@OUTLOOK.COM,88.66,USD,refunded
+W00391,2024-04-08,user002@yahoo.es,56.47,USD,completed
+W00392,2024-04-14,user045@gmail.com,28.28,USD,completed
+W00393,05/11/2024,USER022@OUTLOOK.COM,63.78,EUR,completed
+W00394,"Jan 25, 2024",user006@gmail.com,27.01,EUR,completed
+W00395,21/04/2024,user003@gmail.com,135.06,USD,completed
+W00396,21/11/2024,USER028@OUTLOOK.COM,132.97,EUR,completed
+W00397,2024-11-07,user022@outlook.com,68.51,EUR,completed
+W00398,2024-05-24,USER000@GMAIL.COM,22.6,EUR,completed
+W00399,2024-04-18,user002@yahoo.es,44.44,EUR,completed
+W00400,31/12/2024,user057@gmail.com,92.27,USD,completed
+W00401,2024-04-07,user003@gmail.com,78.77,EUR,completed
+W00402,2024-01-21,user060@gmail.com,173.78,EUR,completed
+W00403,2024-02-14,user096@gmail.com,33.47,EUR,completed
+W00404,"Oct 18, 2024",user021@gmail.com,65.43,EUR,completed
+W00405,2024-01-21,User007@outlook.com,177.18,EUR,completed
+W00406,"Jun 11, 2024", user000@gmail.com ,90.33,EUR,refunded
+W00407,2024-01-01,user027@gmail.com,49.54,USD,completed
+W00408,2024-03-30,user011@yahoo.es,41.42,EUR,completed
+W00409,2024-12-03,user001@outlook.com,35.51,EUR,completed
+W00410,"Aug 16, 2024",user027@gmail.com,58.3,EUR,completed
+W00411,"Jun 03, 2024",user009@gmail.com,94.4,EUR,completed
+W00412,2024-08-17,user009@gmail.com,193.75,EUR,completed
+W00413,2024-03-05,User015@gmail.com,108.39,EUR,completed
+W00414,2024-10-09, user002@yahoo.es ,29.71,USD,completed
+W00415,2024-11-05,qa1@example.com,5893.07,EUR,completed
+W00416,24/12/2024,user118@outlook.com,80.31,EUR,completed
+W00417,2024-11-20,user041@yahoo.es,39.19,EUR,completed
+W00418,"Jul 01, 2024",user144@gmail.com,157.32,EUR,cancelled
+W00419,"Nov 08, 2024",User011@yahoo.es,178.14,USD,completed
+W00420,2024-11-20,qa2@example.com,5572.57,EUR,completed
+W00421,24/03/2024, user000@gmail.com ,125.24,EUR,completed
+W00422,2024-12-22,user006@gmail.com,38.2,USD,cancelled
+W00423,24/07/2024,user007@outlook.com,100.81,USD,completed
+W00424,24/03/2024,user008@yahoo.es,96.02,EUR,completed
+W00425,2024-08-11,user000@gmail.com,142.47,EUR,refunded
+W00426,21/07/2024,user032@yahoo.es,39.08,EUR,completed
+W00427,2024-01-27,user090@gmail.com,76.35,EUR,completed
+W00428,2024-08-29,USER001@OUTLOOK.COM,64.57,USD,completed
+W00429,07/02/2024,user000@gmail.com,43.18,USD,completed
+W00430,2024-11-08,user011@yahoo.es,46.02,EUR,completed
+W00431,2024-07-25,user039@gmail.com,158.87,EUR,completed
+W00432,2024-06-27,user001@outlook.com,139.41,USD,completed
+W00433,15/12/2024,user000@gmail.com,109.64,EUR,completed
+W00434,04/07/2024,user099@gmail.com,37.17,EUR,completed
+W00435,2024-12-10,user000@gmail.com,97.05,EUR,completed
+W00436,02/10/2024,USER007@OUTLOOK.COM,59.74,EUR,completed
+W00437,2024-09-19,user044@yahoo.es,71.08,EUR,completed
+W00438,2024-08-29,user000@gmail.com,77.17,EUR,cancelled
+W00439,2024-12-19,user005@yahoo.es,49.19,EUR,refunded
+W00440,18/02/2024,user084@gmail.com,78.4,EUR,completed
+W00441,"Apr 08, 2024",user032@yahoo.es,55.3,EUR,completed
+W00442,2024-12-17,user015@gmail.com,65.57,EUR,completed
+W00443,04/05/2024,user003@gmail.com,111.85,EUR,cancelled
+W00444,"Sep 24, 2024",user071@yahoo.es,46.25,USD,refunded
+W00445,2024-04-01, user001@outlook.com ,119.04,EUR,completed
+W00446,2024-06-15,USER000@GMAIL.COM,184.79,EUR,refunded
+W00447,2024-07-03,user004@outlook.com,187.18,EUR,completed
+W00448,29/07/2024,user000@gmail.com,79.52,USD,cancelled
+W00449,2024-12-24, user057@gmail.com ,49.16,EUR,completed
+W00450,2024-01-04,user000@gmail.com,106.55,EUR,completed
+W00451,26/04/2024,user000@gmail.com,36.45,USD,completed
+W00452,2024-04-29,user002@yahoo.es,117.17,EUR,completed
+W00453,2024-11-10,USER013@OUTLOOK.COM,192.11,USD,completed
+W00454,11/08/2024,user043@outlook.com,54.81,EUR,completed
+W00455,2024-11-12,User125@yahoo.es,129.28,EUR,completed
+W00456,2024-06-03,user126@gmail.com,73.54,EUR,completed
+W00457,2024-03-08,user001@outlook.com,98.84,USD,completed
+W00458,30/01/2024,user000@gmail.com,44.84,EUR,completed
+W00459,2024-03-23,user001@outlook.com,31.02,EUR,completed
+W00460,2024-06-02,user011@yahoo.es,117.35,EUR,completed
+W00461,2024-04-02,USER008@YAHOO.ES,76.49,EUR,completed
+W00462,2024-05-04, user008@yahoo.es ,61.74,EUR,completed
+W00463,"Dec 25, 2024",user003@gmail.com,53.77,EUR,completed
+W00464,2024-11-06,user001@outlook.com,121.03,EUR,cancelled
+W00465,2024-04-20,user003@gmail.com,64.36,USD,completed
+W00466,2024-06-10,user009@gmail.com,30.28,EUR,completed
+W00467,04/12/2024,user058@outlook.com,87.19,EUR,completed
+W00468,2024-10-19,user050@yahoo.es,52.15,EUR,completed
+W00469,2024-05-16,USER017@YAHOO.ES,125.46,USD,completed
+W00470,2024-04-12,User002@yahoo.es,48.86,EUR,completed
+W00471,"Feb 09, 2024",User015@gmail.com,77.68,EUR,completed
+W00472,18/10/2024,user002@yahoo.es,123.22,EUR,refunded
+W00473,2024-12-22,user006@gmail.com,56.33,EUR,completed
+W00474,2024-03-01,user000@gmail.com,42.75,EUR,completed
+W00475,2024-07-31,user000@gmail.com,88.24,EUR,completed
+W00476,2024-07-01,user001@outlook.com,55.06,USD,refunded
+W00477,2024-07-23,USER000@GMAIL.COM,38.35,EUR,completed
+W00478,21/03/2024, user027@gmail.com ,24.2,USD,completed
+W00479,2024-11-30,user112@outlook.com,32.13,EUR,completed
+W00480,19/08/2024,user013@outlook.com,64.47,EUR,completed
+W00481,2024-05-08,user149@yahoo.es,41.08,EUR,completed
+W00482,2024-07-08,user038@yahoo.es,69.97,EUR,refunded
+W00483,16/06/2024, user007@outlook.com ,41.94,EUR,refunded
+W00484,"Dec 30, 2024",user000@gmail.com,50.89,EUR,completed
+W00485,2024-07-23,user015@gmail.com,62.54,EUR,completed
+W00486,2024-12-08,user003@gmail.com,38.47,USD,completed
+W00487,2024-08-19,user038@yahoo.es,99.07,USD,completed
+W00488,2024-03-28,user031@outlook.com,70.07,EUR,completed
+W00489,2024-12-10,USER085@OUTLOOK.COM,49.62,EUR,completed
+W00490,06/11/2024,user020@yahoo.es,153.91,EUR,completed
+W00491,2024-03-06,user059@yahoo.es,59.96,USD,refunded
+W00492,2024-12-24,user010@outlook.com,85.53,EUR,completed
+W00493,20/12/2024,user081@gmail.com,56.89,EUR,completed
+W00494,"Jun 26, 2024",user012@gmail.com,28.24,USD,completed
+W00495,2024-12-24,user014@yahoo.es,207.15,EUR,completed
+W00496,28/04/2024,USER000@GMAIL.COM,84.46,EUR,completed
+W00497,2024-07-15,user003@gmail.com,71.06,EUR,completed
+W00498,09/12/2024,USER023@YAHOO.ES,77.39,USD,completed
+W00499,2024-11-07,user001@outlook.com,91.05,USD,completed
+W00500,2024-09-03, user000@gmail.com ,32.31,EUR,completed
+W00501,2024-11-17,user001@outlook.com,36.06,EUR,completed
+W00502,2024-11-30,user117@gmail.com,69.76,EUR,completed
+W00503,2024-03-19,user074@yahoo.es,48.3,EUR,completed
+W00504,2024-02-29,user034@outlook.com,31.78,EUR,completed
+W00505,2024-12-31,user001@outlook.com,22.58,EUR,completed
+W00506,2024-11-21,user056@yahoo.es,109.65,EUR,completed
+W00507,05/11/2024,user000@gmail.com,57.86,EUR,cancelled
+W00508,2024-12-19,user000@gmail.com,71.58,EUR,completed
+W00509,2024-09-27,user058@outlook.com,40.38,EUR,completed
+W00510,2024-05-26,user005@yahoo.es,66.83,EUR,completed
+W00511,2024-07-06,USER016@OUTLOOK.COM,40.71,EUR,cancelled
+W00512,05/05/2024,USER015@GMAIL.COM,71.84,EUR,refunded
+W00513,02/02/2024,user047@yahoo.es,62.06,EUR,completed
+W00514,2024-09-13,user046@outlook.com,84.18,EUR,refunded
+W00515,2024-06-27,User000@gmail.com,95.69,EUR,completed
+W00516,07/06/2024,user010@outlook.com,70.58,EUR,cancelled
+W00517,"Apr 24, 2024",User101@yahoo.es,43.0,EUR,completed
+W00518,01/01/2024,user021@gmail.com,190.66,EUR,completed
+W00519,05/12/2024,user023@yahoo.es,67.54,USD,completed
+W00520,12/09/2024,USER009@GMAIL.COM,60.48,EUR,completed
+W00521,2024-02-04,user073@outlook.com,45.07,EUR,completed
+W00522,12/12/2024,user008@yahoo.es,97.76,EUR,completed
+W00523,2024-03-17,user126@gmail.com,45.2,EUR,completed
+W00524,"Apr 23, 2024",User061@outlook.com,13.63,EUR,cancelled
+W00525,2024-03-25, user003@gmail.com ,37.85,EUR,completed
+W00526,2024-08-04,user086@yahoo.es,81.99,EUR,completed
+W00527,21/12/2024,user006@gmail.com,60.65,USD,completed
+W00528,17/12/2024,user001@outlook.com,39.63,EUR,refunded
+W00529,2024-05-27,user011@yahoo.es,69.51,USD,completed
+W00530,2024-03-08,user001@outlook.com,83.91,USD,completed
+W00531,20/12/2024,user015@gmail.com,32.06,EUR,refunded
+W00532,11/06/2024,user028@outlook.com,165.4,EUR,completed
+W00533,2024-11-04,user008@yahoo.es,23.18,EUR,completed
+W00534,07/03/2024,user000@gmail.com,31.04,EUR,completed
+W00535,2024-01-20,user000@gmail.com,50.16,EUR,completed
+W00536,02/09/2024,USER000@GMAIL.COM,25.69,EUR,completed
+W00537,2024-06-28,user008@yahoo.es,51.92,EUR,refunded
+W00538,18/11/2024,user110@yahoo.es,67.96,EUR,completed
+W00539,"Nov 15, 2024",user031@outlook.com,70.84,EUR,completed
+W00540,2024-11-21,qa2@example.com,8660.63,EUR,completed
+W00541,2024-11-11,user000@gmail.com,72.78,EUR,completed
+W00542,03/10/2024,user006@gmail.com,37.68,EUR,completed
+W00543,"May 02, 2024",user000@gmail.com,84.14,EUR,completed
+W00544,24/12/2024,user000@gmail.com,47.54,EUR,completed
+W00545,2024-12-01,user002@yahoo.es,38.3,EUR,completed
+W00546,04/04/2024,user000@gmail.com,38.05,USD,completed
+W00547,2024-04-09, user001@outlook.com ,372.66,EUR,completed
+W00548,2024-11-21,user002@yahoo.es,41.86,EUR,refunded
+W00549,"Dec 08, 2024",user038@yahoo.es,166.25,USD,completed
+W00550,"Aug 12, 2024",User009@gmail.com,76.72,USD,completed
+W00551,2024-07-21,user000@gmail.com,145.68,USD,completed
+W00552,"Jun 05, 2024",user086@yahoo.es,78.72,USD,completed
+W00553,2024-08-25,USER000@GMAIL.COM,174.39,EUR,completed
+W00554,2024-09-16,user019@outlook.com,61.52,EUR,completed
+W00555,2024-10-29,user000@gmail.com,97.61,EUR,completed
+W00556,21/07/2024,user002@yahoo.es,53.52,USD,completed
+W00557,2024-11-10,qa1@example.com,7419.21,EUR,completed
+W00558,2024-09-03,user000@gmail.com,72.39,EUR,completed
+W00559,2024-12-03,user088@outlook.com,126.62,USD,completed
+W00560,31/12/2024,user002@yahoo.es,89.44,EUR,completed
+W00561,12/03/2024,user037@outlook.com,45.88,EUR,refunded
+W00562,2024-08-01,user032@yahoo.es,47.73,USD,completed
+W00563,2024-01-07,user000@gmail.com,39.19,EUR,cancelled
+W00564,29/05/2024,user063@gmail.com,111.53,EUR,refunded
+W00565,2024-02-09, user000@gmail.com ,74.85,USD,completed
+W00566,20/12/2024,user009@gmail.com,55.33,EUR,completed
+W00567,2024-01-28,USER000@GMAIL.COM,63.53,EUR,completed
+W00568,2024-01-12,user002@yahoo.es,61.04,EUR,completed
+W00569,2024-10-08, user003@gmail.com ,122.1,EUR,completed
+W00570,09/11/2024,user051@gmail.com,75.17,EUR,completed
+W00571,2024-11-24,user144@gmail.com,36.72,EUR,completed
+W00572,2024-12-30,User001@outlook.com,89.7,USD,completed
+W00573,2024-09-21,user000@gmail.com,208.27,EUR,cancelled
+W00574,2024-09-18,user001@outlook.com,41.13,USD,cancelled
+W00575,08/12/2024,user060@gmail.com,34.71,EUR,completed
+W00576,"Feb 08, 2024",user000@gmail.com,112.24,USD,completed
+W00577,2024-08-27,user003@gmail.com,40.61,EUR,refunded
+W00578,"Apr 09, 2024",USER000@GMAIL.COM,81.33,EUR,completed
+W00579,2024-12-02,user013@outlook.com,95.75,EUR,completed
+W00580,2024-02-25,user000@gmail.com,56.6,EUR,completed
+W00581,2024-12-16,User047@yahoo.es,34.02,USD,completed
+W00582,2024-09-03,user005@yahoo.es,28.83,EUR,completed
+W00583,2024-12-22,user001@outlook.com,42.55,EUR,completed
+W00584,2024-12-27,user001@outlook.com,54.23,EUR,completed
+W00585,2024-02-22,user017@yahoo.es,105.21,EUR,completed
+W00586,2024-11-10,user093@gmail.com,58.36,EUR,completed
+W00587,2024-06-06,user078@gmail.com,115.85,EUR,completed
+W00588,27/08/2024,USER016@OUTLOOK.COM,45.17,EUR,refunded
+W00589,2024-03-12,user019@outlook.com,33.08,USD,cancelled
+W00590,2024-10-20,User047@yahoo.es,17.3,EUR,completed
+W00591,2024-08-11,USER018@GMAIL.COM,79.55,USD,completed
+W00592,2024-02-02,user055@outlook.com,159.62,USD,completed
+W00593,21/01/2024,user085@outlook.com,62.45,USD,completed
+W00594,06/07/2024,user054@gmail.com,105.48,EUR,completed
+W00595,29/10/2024,user002@yahoo.es,50.56,EUR,completed
+W00596,2024-01-28,USER016@OUTLOOK.COM,67.15,USD,refunded
+W00597,2024-08-05,user022@outlook.com,28.34,EUR,completed
+W00598,2024-09-17,user128@yahoo.es,175.71,EUR,completed
+W00599,2024-12-31,user000@gmail.com,74.84,USD,cancelled
+W00600,2024-02-27,user024@gmail.com,127.47,EUR,completed
+W00601,09/08/2024,user011@yahoo.es,33.58,EUR,completed
+W00602,2024-05-25, user001@outlook.com ,51.51,EUR,cancelled
+W00603,2024-05-06,user006@gmail.com,55.12,USD,completed
+W00604,2024-08-24,user000@gmail.com,74.46,USD,cancelled
+W00605,2024-01-26,user003@gmail.com,72.72,EUR,completed
+W00606,"Apr 20, 2024",user015@gmail.com,55.42,EUR,completed
+W00607,2024-02-16,User001@outlook.com,82.26,USD,completed
+W00608,"Jul 02, 2024",User008@yahoo.es,83.78,EUR,completed
+W00609,"Sep 28, 2024",user028@outlook.com,151.1,USD,completed
+W00610,"Apr 05, 2024",User021@gmail.com,48.64,EUR,completed

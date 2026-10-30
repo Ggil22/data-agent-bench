@@ -29,17 +29,17 @@ models:
     provider: gemini
     model: gemini-3.5-flash-lite
     rpm: 12
-  groq-llama-70b:
+  groq-gpt-oss-120b:
     provider: groq
-    model: llama-3.3-70b-versatile
+    model: openai/gpt-oss-120b
     rpm: 25
   groq-gpt-oss-20b:
     provider: groq
     model: openai/gpt-oss-20b
     rpm: 25
-  groq-qwen3-32b:
+  groq-qwen3.8-27b:
     provider: groq
-    model: qwen/qwen3-32b
+    model: qwen/qwen3.8-27b
     rpm: 25
   openrouter-llama-70b:
     provider: openrouter

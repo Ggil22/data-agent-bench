@@ -27,3 +27,28 @@ Hourly readings from 5 temperature sensors.
 - timestamp (YYYY-MM-DD HH:MM:SS), sensor_id, temperature (Celsius), humidity (%).
 - A temperature of -999 is an error code emitted by faulty sensors, not a real reading.
 - Sensors should report once per hour; missing rows are readings that were lost.
+
+## web_orders.csv
+Online shop orders from 2024, exported from a legacy system.
+- order_ref: order identifier.
+- order_date: order date. Three systems wrote this field, so formats are mixed:
+  YYYY-MM-DD, DD/MM/YYYY (day first, European style) and "Mon DD, YYYY" (e.g. Mar 05, 2024).
+- customer_email: the buyer's email. Emails are case-insensitive and some have stray
+  spaces, so the same customer can appear with different spellings.
+- amount: order total, in the currency given by `currency`.
+- currency: EUR or USD. Convert USD to EUR at the fixed rate 1 USD = 0.92 EUR.
+- status: completed, refunded or cancelled. Only completed orders count as revenue.
+
+Orders whose email ends in @example.com are internal test orders and must be excluded
+from every analysis.
+
+## tickets.csv
+Customer support tickets, June to August 2024.
+- ticket_id: ticket identifier.
+- created_at, resolved_at: UTC timestamps (YYYY-MM-DD HH:MM:SS). resolved_at is empty
+  while the ticket is still open.
+- priority: High, Medium or Low. Typed in by hand, so capitalisation and spacing vary.
+- team: support team that handled the ticket (Tier1 or Tier2).
+
+SLA: a resolved ticket breaches its SLA when it took longer than 8 hours (High),
+24 hours (Medium) or 72 hours (Low) to resolve. Open tickets do not count as breaches.

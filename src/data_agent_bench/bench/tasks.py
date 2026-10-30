@@ -9,6 +9,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from data_agent_bench.bench.datasets import SLA_HOURS, USD_TO_EUR
+
 Data = dict[str, pd.DataFrame]
 
 ANSWER_TYPES = ("number", "string", "bool", "list_ordered", "unanswerable")
@@ -82,6 +84,53 @@ def _top_customers(d: Data, k: int) -> list[int]:
     if np.isclose(ordered.iloc[k - 1], ordered.iloc[k]):
         raise ValueError("tie at the top-k boundary")
     return [int(c) for c in ordered.index[:k]]
+
+
+def _web_orders(d: Data) -> pd.DataFrame:
+    """Web orders with the documented rules applied: test orders out, dates parsed, EUR."""
+    w = d["web_orders"].assign(email=d["web_orders"]["customer_email"].str.strip().str.lower())
+    w = w[~w["email"].str.endswith("@example.com")]
+    raw = w["order_date"]
+    date = (
+        pd.to_datetime(raw, format="%Y-%m-%d", errors="coerce")
+        .fillna(pd.to_datetime(raw, format="%d/%m/%Y", errors="coerce"))
+        .fillna(pd.to_datetime(raw, format="%b %d, %Y", errors="coerce"))
+    )
+    eur = w["amount"] * np.where(w["currency"] == "USD", USD_TO_EUR, 1.0)
+    return w.assign(date=date, amount_eur=eur)
+
+
+def _completed_web_orders(d: Data) -> pd.DataFrame:
+    w = _web_orders(d)
+    return w[w["status"] == "completed"]
+
+
+def _tickets(d: Data) -> pd.DataFrame:
+    t = d["tickets"]
+    created = pd.to_datetime(t["created_at"])
+    hours = (pd.to_datetime(t["resolved_at"]) - created).dt.total_seconds() / 3600
+    return t.assign(
+        priority=t["priority"].str.strip().str.capitalize(), created=created, hours=hours
+    )
+
+
+def _resolved_tickets(d: Data) -> pd.DataFrame:
+    return _tickets(d).dropna(subset=["hours"])
+
+
+def _sla_breaches(d: Data) -> int:
+    t = _resolved_tickets(d)
+    return int((t["hours"] > t["priority"].map(SLA_HOURS)).sum())
+
+
+def _faster_team(t: pd.DataFrame) -> str:
+    return argmax_unique(-t.groupby("team")["hours"].mean())
+
+
+def _enterprise_laptop_share(d: Data) -> float:
+    s = _sales_with_revenue(d).merge(d["customers"], on="customer_id")
+    ent = s[s["segment"] == "Enterprise"]
+    return ent.loc[ent["product"] == "Laptop", "revenue"].sum() / ent["revenue"].sum() * 100
 
 
 REV = "Revenue per row is units * unit_price * (1 - discount), treating a missing discount as 0."
@@ -397,6 +446,228 @@ TASKS: list[Task] = [
             _valid_sensors(d).groupby(_valid_sensors(d)["timestamp"].str[:10])["temperature"].mean()
         ),
     ),
+    # --- v0.2: more tasks on the original tables ------------------------------------------
+    Task(
+        "grp_005",
+        "groupby",
+        "medium",
+        "Which manager in employees.csv has the most direct reports? Answer with their "
+        "employee_id.",
+        "number",
+        lambda d: int(argmax_unique(d["employees"]["manager_id"].value_counts())),
+    ),
+    Task(
+        "join_005",
+        "join",
+        "medium",
+        f"What is the total revenue from customers who signed up in 2023? {REV} "
+        "Round to 2 decimals.",
+        "number",
+        lambda d: (
+            _sales_with_revenue(d)
+            .merge(d["customers"], on="customer_id")
+            .loc[lambda s: s["signup_date"].str.startswith("2023"), "revenue"]
+            .sum()
+        ),
+        decimals=2,
+    ),
+    Task(
+        "join_006",
+        "join",
+        "medium",
+        f"Customers from which country generated the highest total revenue? Answer with the "
+        f"country code. {REV}",
+        "string",
+        lambda d: argmax_unique(
+            _sales_with_revenue(d)
+            .merge(d["customers"], on="customer_id")
+            .groupby("country")["revenue"]
+            .sum()
+        ),
+    ),
+    Task(
+        "ts_005",
+        "time_series",
+        "medium",
+        "On which day of the week were the most units sold in sales.csv? Answer with the "
+        "English day name (e.g. Monday).",
+        "string",
+        lambda d: argmax_unique(
+            d["sales"].groupby(pd.to_datetime(d["sales"]["date"]).dt.day_name())["units"].sum()
+        ),
+    ),
+    Task(
+        "ts_006",
+        "time_series",
+        "medium",
+        "How many employees had been with the company for at least 5 years on 2024-01-01?",
+        "number",
+        lambda d: int((pd.to_datetime(d["employees"]["hire_date"]) <= "2019-01-01").sum()),
+    ),
+    Task(
+        "st_005",
+        "statistics",
+        "hard",
+        "What is the Pearson correlation between temperature and humidity in sensors.csv, "
+        "using only valid readings? Round to 3 decimals.",
+        "number",
+        lambda d: _valid_sensors(d)[["temperature", "humidity"]].corr().iloc[0, 1],
+        decimals=3,
+    ),
+    Task(
+        "cln_006",
+        "cleaning",
+        "medium",
+        "Which sensor produced the most error readings?",
+        "string",
+        lambda d: argmax_unique(
+            (d["sensors"]["temperature"] == -999).groupby(d["sensors"]["sensor_id"]).sum()
+        ),
+    ),
+    Task(
+        "cln_007",
+        "cleaning",
+        "medium",
+        "After removing exact duplicate rows from sales.csv, what is the average number of "
+        "units per row in the West region? Round to 3 decimals.",
+        "number",
+        lambda d: d["sales"].drop_duplicates().query("region == 'West'")["units"].mean(),
+        decimals=3,
+    ),
+    Task(
+        "ms_005",
+        "multi_step",
+        "hard",
+        f"What percentage of the revenue from Enterprise customers came from Laptop sales? {REV} "
+        "Answer as a percentage rounded to 2 decimals.",
+        "number",
+        _enterprise_laptop_share,
+        decimals=2,
+    ),
+    # --- web_orders.csv: mixed formats, currencies and business rules ----------------------
+    Task(
+        "wo_001",
+        "cleaning",
+        "hard",
+        "How many web orders were placed in March 2024?",
+        "number",
+        lambda d: int((_web_orders(d)["date"].dt.month == 3).sum()),
+    ),
+    Task(
+        "wo_002",
+        "business_rules",
+        "hard",
+        "What is the total revenue from web orders, in EUR? Round to 2 decimals.",
+        "number",
+        lambda d: _completed_web_orders(d)["amount_eur"].sum(),
+        decimals=2,
+    ),
+    Task(
+        "wo_003",
+        "cleaning",
+        "medium",
+        "How many distinct customers placed web orders?",
+        "number",
+        lambda d: int(_web_orders(d)["email"].nunique()),
+    ),
+    Task(
+        "wo_004",
+        "filtering",
+        "easy",
+        "How many web orders have the status refunded?",
+        "number",
+        lambda d: int((_web_orders(d)["status"] == "refunded").sum()),
+    ),
+    Task(
+        "wo_005",
+        "time_series",
+        "hard",
+        "In which month of 2024 were the most completed web orders placed? Answer with the "
+        "month number (1-12).",
+        "number",
+        lambda d: int(argmax_unique(_completed_web_orders(d)["date"].dt.month.value_counts())),
+    ),
+    Task(
+        "wo_006",
+        "business_rules",
+        "medium",
+        "What percentage of web orders were paid in USD? Answer as a percentage rounded to "
+        "2 decimals.",
+        "number",
+        lambda d: (_web_orders(d)["currency"] == "USD").mean() * 100,
+        decimals=2,
+    ),
+    Task(
+        "wo_007",
+        "multi_step",
+        "hard",
+        "Which customer spent the most on web orders, in EUR? Answer with their email address "
+        "in lowercase.",
+        "string",
+        lambda d: argmax_unique(_completed_web_orders(d).groupby("email")["amount_eur"].sum()),
+    ),
+    # --- tickets.csv: inconsistent labels, open tickets, SLA rules ------------------------
+    Task(
+        "tk_001",
+        "cleaning",
+        "medium",
+        "How many support tickets have High priority?",
+        "number",
+        lambda d: int((_tickets(d)["priority"] == "High").sum()),
+    ),
+    Task(
+        "tk_002",
+        "filtering",
+        "easy",
+        "How many support tickets are still open?",
+        "number",
+        lambda d: int(d["tickets"]["resolved_at"].isna().sum()),
+    ),
+    Task(
+        "tk_003",
+        "statistics",
+        "medium",
+        "What is the median resolution time of resolved support tickets, in hours? "
+        "Round to 2 decimals.",
+        "number",
+        lambda d: _resolved_tickets(d)["hours"].median(),
+        decimals=2,
+    ),
+    Task(
+        "tk_004",
+        "business_rules",
+        "hard",
+        "How many support tickets breached their SLA?",
+        "number",
+        _sla_breaches,
+    ),
+    Task(
+        "tk_005",
+        "groupby",
+        "medium",
+        "Which support team has the lower mean resolution time on resolved tickets? "
+        "Answer Tier1 or Tier2.",
+        "string",
+        lambda d: _faster_team(_resolved_tickets(d)),
+    ),
+    Task(
+        "tk_006",
+        "time_series",
+        "medium",
+        "On which day of the week were the most support tickets created? Answer with the "
+        "English day name (e.g. Monday).",
+        "string",
+        lambda d: argmax_unique(_tickets(d)["created"].dt.day_name().value_counts()),
+    ),
+    Task(
+        "tk_007",
+        "multi_step",
+        "hard",
+        "Considering only resolved tickets with Medium priority, which support team has the lower "
+        "mean resolution time? Answer Tier1 or Tier2.",
+        "string",
+        lambda d: _faster_team(_resolved_tickets(d).query("priority == 'Medium'")),
+    ),
     # --- unanswerable (hallucination checks) -----------------------------------------------
     Task(
         "un_001",
@@ -419,6 +690,62 @@ TASKS: list[Task] = [
         "unanswerable",
         "hard",
         "What is the profit margin on Laptop sales?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_004",
+        "unanswerable",
+        "hard",
+        "What was the total revenue in sales.csv in 2023?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_005",
+        "unanswerable",
+        "medium",
+        "What is the average temperature recorded by sensor S6?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_006",
+        "unanswerable",
+        "hard",
+        "What was the average temperature across all sensors in April 2024?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_007",
+        "unanswerable",
+        "medium",
+        "Which marketing channel brought in the most web orders?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_008",
+        "unanswerable",
+        "medium",
+        "What is the average delivery time of web orders, in days?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_009",
+        "unanswerable",
+        "medium",
+        "How many employees left the company in 2023?",
+        "unanswerable",
+        lambda d: None,
+    ),
+    Task(
+        "un_010",
+        "unanswerable",
+        "medium",
+        "What is the average satisfaction score of resolved support tickets?",
         "unanswerable",
         lambda d: None,
     ),

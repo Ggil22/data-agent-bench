@@ -45,7 +45,7 @@ def cmd_run(args: argparse.Namespace) -> None:
     unknown = [m for m in args.models if m not in configs]
     if unknown:
         sys.exit(f"Unknown models: {', '.join(unknown)}. See `dab models`.")
-    if not (args.data_dir / "sales.csv").exists():
+    if not all((args.data_dir / f"{name}.csv").exists() for name in datasets.TABLES):
         datasets.write(args.data_dir)
 
     cache_dir = None if args.no_cache else DEFAULT_CACHE

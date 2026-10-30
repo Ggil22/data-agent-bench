@@ -35,3 +35,31 @@ def test_select_tasks():
     assert len(select_tasks("all")) == len(TASKS)
     assert all(t.category == "join" for t in select_tasks("category:join"))
     assert [t.id for t in select_tasks("agg_001,un_001")] == ["agg_001", "un_001"]
+
+
+def test_generate_writes_every_table(data):
+    assert set(data) == set(datasets.TABLES)
+
+
+def test_original_tables_do_not_depend_on_new_ones():
+    # New tables use their own generators, so adding them must not change existing data
+    # (otherwise results from earlier runs would no longer be comparable).
+    tables = datasets.generate()
+    sales = tables["sales"]
+    assert len(sales) == 2015
+    assert sales["units"].sum() == 11333
+
+
+def test_new_traps_change_the_naive_answer(data):
+    by_id = {t.id: t for t in TASKS}
+    web, tickets = data["web_orders"], data["tickets"]
+    # case and spacing variants inflate a naive distinct count
+    assert web["customer_email"].nunique() > by_id["wo_003"].compute(data)
+    # without stripping and normalising labels, many High tickets are missed
+    assert (tickets["priority"] == "High").sum() < by_id["tk_001"].compute(data)
+    # test orders dominate the naive top spender
+    completed = web[web["status"] == "completed"]
+    assert completed.groupby("customer_email")["amount"].sum().idxmax().endswith("@example.com")
+    # Simpson's paradox: Tier2 is faster overall but slower on Medium tickets
+    assert by_id["tk_005"].compute(data) == "Tier2"
+    assert by_id["tk_007"].compute(data) == "Tier1"
