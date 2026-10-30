@@ -1,0 +1,50 @@
+# Providers exposing an OpenAI-compatible chat completions API.
+# All of these have a free tier (limits change often; check each provider's docs).
+providers:
+  gemini:
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai/
+    api_key_env: GEMINI_API_KEY        # https://aistudio.google.com/apikey
+  groq:
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY          # https://console.groq.com/keys
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY    # https://openrouter.ai/keys (models ending in ":free")
+  cerebras:
+    base_url: https://api.cerebras.ai/v1
+    api_key_env: CEREBRAS_API_KEY      # https://cloud.cerebras.ai
+  ollama:
+    base_url: http://localhost:11434/v1
+    api_key_env: null                  # local, no key needed
+
+# name -> provider + provider-specific model id.
+# Model ids get renamed/retired; verify them in each provider's model list before a run.
+# rpm = max requests per minute we send (stay below the free-tier limit).
+models:
+  gemini-flash:
+    provider: gemini
+    model: gemini-3.5-flash
+    rpm: 8
+  gemini-flash-lite:
+    provider: gemini
+    model: gemini-3.5-flash-lite
+    rpm: 12
+  groq-llama-70b:
+    provider: groq
+    model: llama-3.3-70b-versatile
+    rpm: 25
+  groq-gpt-oss-20b:
+    provider: groq
+    model: openai/gpt-oss-20b
+    rpm: 25
+  groq-qwen3-32b:
+    provider: groq
+    model: qwen/qwen3-32b
+    rpm: 25
+  openrouter-llama-70b:
+    provider: openrouter
+    model: meta-llama/llama-3.3-70b-instruct:free
+    rpm: 15
+  ollama-qwen-3b:
+    provider: ollama
+    model: qwen2.5:3b
